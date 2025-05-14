@@ -737,11 +737,11 @@ export default function OrderPage() {
                           _id:
                             typeof meal.providerId === "string"
                               ? meal.providerId
-                              : (meal.providerId as any)._id,
+                              : (meal.providerId as any)?._id,
                           name:
                             typeof meal.providerId === "string"
                               ? meal.providerName || "Provider"
-                              : (meal.providerId as any).name,
+                              : (meal.providerId as any)?.name,
                         },
                       }}
                       quantity={quantity}
